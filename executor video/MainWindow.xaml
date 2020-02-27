@@ -1,0 +1,83 @@
+﻿<Window x:Name="PLAYER_DANILO" x:Class="executor_video.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="D PLAYER" Height="731.994" Width="1000.952"  WindowStartupLocation="CenterScreen">
+    <Grid Margin="-86,0,-332,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1035*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="323*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnPlay" Content="PLAYER" HorizontalAlignment="Left" Margin="640,675,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.128,1.721" Click="Button_Click_1"/>
+     
+        <MediaElement HorizontalAlignment="Left" Height="240"  Name="tela1" Margin="130,35,0,0" VerticalAlignment="Top" Width="395" LoadedBehavior="Manual" RenderTransformOrigin="0.5,0.5">
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.377"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+        </MediaElement>
+            
+            <Viewbox HorizontalAlignment="Left" Height="100" Margin="-95,275,0,0" VerticalAlignment="Top" Width="100"/>
+        <MediaElement HorizontalAlignment="Left" Height="265"  x:Name="tela3" Margin="140,355,0,0" VerticalAlignment="Top" Width="810" LoadedBehavior="Manual" RenderTransformOrigin="0.5,0.5">
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.377"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+        </MediaElement>
+        <MediaElement HorizontalAlignment="Left" Height="240"  x:Name="tela2" Margin="555,35,0,0" VerticalAlignment="Top" Width="400" LoadedBehavior="Manual" RenderTransformOrigin="0.5,0.5">
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.377"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+        </MediaElement>
+        <Button x:Name="btnPause" Content="PAUSE" HorizontalAlignment="Left" Margin="725,675,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.128,1.721" Click="btnPause_Click"/>
+        <Button x:Name="btnContinue" Content="CONTINUE" HorizontalAlignment="Left" Margin="805,675,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.128,1.721" Click="btnContinue_Click" />
+        <Button x:Name="btnParar" Content="STOP" HorizontalAlignment="Left" Margin="885,675,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.128,1.721" Click="btnParar_Click"  />
+        <Button x:Name="btnAbrirVideo" Content="ESCOLHER &#xA;OS&#xA;VIDEOS" HorizontalAlignment="Left" Margin="975,470,0,0" VerticalAlignment="Top" Width="83" Height="60" Click="btnAbrirVideo_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.4"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="tela 3" HorizontalAlignment="Left" Margin="510,325,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.053,10.577" FontWeight="Bold"/>
+        <Label Content="tela 1" HorizontalAlignment="Left" Margin="285,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.053,10.577" FontWeight="Bold"/>
+        <Label Content="tela 2" HorizontalAlignment="Left" Margin="740,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.053,10.577" FontWeight="Bold"/>
+        <Label Content="1° ESCOLHA OS VIDEOS" HorizontalAlignment="Left" Margin="87,660,0,0" VerticalAlignment="Top"/>
+        <Label Content="2° CLICAR O PLAYER" HorizontalAlignment="Left" Margin="86,675,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="sliderTela1" HorizontalAlignment="Left" Margin="300,285,0,0" VerticalAlignment="Top" Height="25" Width="50" ValueChanged="sliderTela1_ValueChanged"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="310" Margin="115,5,0,0" VerticalAlignment="Top" Width="420">
+            <Label Content="VELOCIDADE" Margin="239,274,94,9"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="340" Margin="115,325,0,0" VerticalAlignment="Top" Width="850">
+            <Label Content="VELOCIDADE" Margin="314,304,449,9"/>
+        </Border>
+        <Slider Name="sliderTela2" HorizontalAlignment="Left" Margin="730,287,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.3,0.278" ValueChanged="sliderTela2_ValueChanged"/>
+        <Slider Name="sliderTela3" HorizontalAlignment="Left" Margin="520,635,0,0" VerticalAlignment="Top" Width="50" ValueChanged="sliderTela3_ValueChanged"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="310" Margin="545,5,0,0" VerticalAlignment="Top" Width="420">
+            <Label Content="VELOCIDADE" Margin="234,274,99,9"/>
+        </Border>
+        <Button x:Name="btnTest" Content="Voltar &#xD;&#xA;Em segundo" HorizontalAlignment="Left" Margin="980,575,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Grid.ColumnSpan="2" Height="45"/>
+        <Slider Name="sliderTodasTela" HorizontalAlignment="Left" Margin="535,677,0,0" VerticalAlignment="Top" Width="50
+                " ValueChanged="sliderTodasTela_ValueChanged"/>
+        <TextBox x:Name="txtValor" Grid.ColumnSpan="2" HorizontalAlignment="Left"  Height="23" Margin="980,625,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"  Width="75" KeyDown="txtValor_KeyDown"/>
+        <Button x:Name="btnAvan" Content="Avançar &#xA;Em segundo" HorizontalAlignment="Left" Margin="980,650,0,0" VerticalAlignment="Top" Width="75"  Grid.ColumnSpan="2" Height="45" Click="btnAvan_Click"/>
+
+    </Grid>
+</Window>
